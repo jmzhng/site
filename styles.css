@@ -1,0 +1,302 @@
+/* ============================================================
+   Edit these variables to retheme the whole site.
+   ============================================================ */
+:root {
+  --accent: #3a5fcd;          /* bluish accent — selection, links, post titles */
+  --accent-soft: #6a85d9;
+  --text: #111111;
+  --text-soft: #6b6b6b;
+  --bg: #ffffff;
+  --grid-minor: rgba(0, 0, 0, 0.04);
+  --grid-major: rgba(0, 0, 0, 0.075);
+  --rule: rgba(0, 0, 0, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+::selection { background: var(--accent); color: #fff; }
+
+body {
+  font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  /* Graph paper: 24px minor grid + 120px major grid, fixed-attached. */
+  background-image:
+    linear-gradient(to right,  var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(to right,  var(--grid-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-major) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4.5rem 1.75rem 6rem;
+}
+
+/* ---------- Header ---------- */
+.site-header { margin-bottom: 3.5rem; }
+
+.site-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.nav { display: flex; gap: 1.75rem; }
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+.nav a:hover,
+.nav a.active { color: var(--accent); }
+
+/* ---------- Generic links ---------- */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Home: blurb ---------- */
+.blurb {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 56ch;
+  margin-bottom: 0.75rem;
+}
+
+.more-link {
+  display: inline-block;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--accent);
+  margin-top: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.more-link:hover { text-decoration: none; opacity: 0.75; }
+
+/* ---------- Home: time block ---------- */
+.times {
+  margin: 3rem 0 3.5rem;
+  font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.95;
+  color: var(--text-soft);
+}
+.time-row a {
+  color: var(--text-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0,0,0,0.25);
+}
+.time-row a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.time-row .clock {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Section labels ---------- */
+.section-label {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-soft);
+  margin-bottom: 1.25rem;
+  margin-top: 3rem;
+}
+
+/* ---------- Latest-posts list (home page) ---------- */
+.posts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.posts-list li {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  column-gap: 1.5rem;
+  align-items: baseline;
+}
+.posts-list .date {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  white-space: nowrap;
+}
+.posts-list .title {
+  color: var(--accent);
+  font-size: 1rem;
+  text-decoration: none;
+}
+.posts-list .title:hover { text-decoration: underline; }
+.posts-list .empty {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  color: var(--text-soft);
+  grid-column: 1 / -1;
+}
+
+/* ---------- About page ---------- */
+.about-contacts {
+  margin-bottom: 2.25rem;
+  font-size: 1rem;
+  color: var(--text-soft);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about-contacts a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 1px;
+}
+.about-contacts a:hover { color: var(--accent); }
+.about-contacts .sep {
+  margin: 0 0.65rem;
+  color: rgba(0,0,0,0.25);
+  user-select: none;
+}
+
+.about-body p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 60ch;
+}
+
+/* ---------- Thoughts archive ---------- */
+.archive-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.year-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(0,0,0,0.32);
+  margin-top: 2.75rem;
+  margin-bottom: 1.1rem;
+}
+.year-label:first-of-type { margin-top: 0.5rem; }
+
+.archive-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+.archive-list a {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.archive-list a:hover { color: var(--accent); }
+
+.empty-state {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+/* ---------- Single post page ---------- */
+.post { max-width: 65ch; }
+
+.post-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.post-meta {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  margin-bottom: 2.25rem;
+}
+.post-body { font-size: 1.05rem; line-height: 1.75; }
+.post-body p { margin-bottom: 1.2rem; }
+.post-body h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.post-body h4 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.post-body a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.post-body ul, .post-body ol { margin: 0 0 1.2rem 1.4rem; }
+.post-body li { margin-bottom: 0.35rem; }
+.post-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.2rem 0 0.2rem 1.05rem;
+  margin: 1.4rem 0;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+.post-body code {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: rgba(58, 95, 205, 0.08);
+  padding: 0.12em 0.35em;
+  border-radius: 3px;
+}
+.post-body pre {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.88rem;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1rem 1.1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.3rem 0;
+  line-height: 1.55;
+}
+.post-body pre code { background: none; padding: 0; }
+.post-body img { max-width: 100%; height: auto; display: block; margin: 1.4rem 0; border-radius: 4px; }
+.post-body hr { border: none; border-top: 1px solid var(--rule); margin: 2.25rem 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 540px) {
+  .container { padding: 3rem 1.25rem 5rem; }
+  .site-name { font-size: 2.25rem; }
+  .archive-title { font-size: 2rem; }
+  .post-title { font-size: 1.75rem; }
+  .posts-list li {
+    grid-template-columns: 6.5rem 1fr;
+    column-gap: 1rem;
+  }
+  .posts-list .date { font-size: 0.95rem; }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       EDIT THESE TWO META TAGS.
+       The home page and thoughts page pull title + date from here.
+       Date format: YYYY-MM-DD.
+       The browser tab title and the on-page heading auto-fill from
+       these — you don't need to update them anywhere else.
+       ============================================================ -->
+  <meta name="post-title" content="hello world" />
+  <meta name="post-date"  content="2026-04-30" />
+
+  <title>Loading…</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <main class="container">
+
+    <header class="site-header">
+      <h1 class="site-name"><a href="../index.html">jeremy zhang</a></h1>
+      <nav class="nav">
+        <a href="../index.html">home</a>
+        <a href="../about.html">about me</a>
+        <a href="../blog.html" class="active">thoughts</a>
+      </nav>
+    </header>
+
+    <article class="post">
+      <!-- These two elements auto-fill from the meta tags above. -->
+      <h2 class="post-title" data-from="post-title">Loading…</h2>
+      <p class="post-meta"  data-from="post-date"></p>
+
+      <!-- ============================================================
+           POST CONTENT — write below. Standard HTML.
+           ============================================================ -->
+      <div class="post-body">
+
+        <p>
+          This is the first post on this site. It's also the template:
+          duplicate this file under <code>posts/</code>, change the two
+          meta tags at the top, and write whatever you want here.
+        </p>
+
+        <p>
+          Adding a post is two steps: drop the new file in this folder,
+          then add its path to the <code>POSTS</code> array in
+          <code>posts.js</code>. The home page and thoughts page will
+          pick it up automatically and sort it into the right year.
+        </p>
+
+        <h3>What you can use</h3>
+
+        <p>
+          Anything that's plain HTML. Some examples — paragraphs,
+          <a href="https://example.com">inline links</a>, <code>inline code</code>,
+          <strong>bold</strong>, and <em>italic</em>.
+        </p>
+
+        <p>Code blocks render with a soft background:</p>
+
+<pre><code>fn main() {
+    println!("hello, world");
+}</code></pre>
+
+        <p>And blockquotes pick up the accent stripe:</p>
+
+        <blockquote>
+          The map is not the territory, but with enough graph paper, you can
+          forget the difference.
+        </blockquote>
+
+        <h3>Lists work too</h3>
+
+        <ul>
+          <li>An unordered item</li>
+          <li>Another item with a <a href="https://example.com">link</a></li>
+          <li>One more</li>
+        </ul>
+
+        <p>That's it. Replace this content with your actual post.</p>
+
+      </div>
+    </article>
+
+  </main>
+
+  <script src="../posts.js"></script>
+</body>
+</html>
