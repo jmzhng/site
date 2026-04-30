@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jeremy zhang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Hello, world.</h1>
-    <p>Site under construction.</p>
+  <main class="container">
+
+    <header class="site-header">
+      <h1 class="site-name">jeremy zhang</h1>
+      <nav class="nav">
+        <a href="index.html" class="active">home</a>
+        <a href="about.html">about me</a>
+        <a href="blog.html">thoughts</a>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+         HOME BLURB — edit this paragraph (short version of about me)
+         ============================================================ -->
+    <p class="blurb">
+      hi i'm jeremy, computer engineering and brain and behvioral sciences 
+      student at purdue. i'm interested in human-centric technology.
+    </p>
+    <a href="about.html" class="more-link">&gt;&gt;</a>
+
+    <!-- ============================================================
+         TIME ZONES — edit city name, IANA timezone (data-tz),
+         and the two link URLs. Clock + abbreviation auto-update.
+         IANA list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+         ============================================================ -->
+    <div class="times">
+      <p class="time-row" data-tz="America/Indiana/Indianapolis">
+        <a href="https://24timezones.com/world_directory/current_west_lafayette_time.php">TIME IN WEST LAFAYETTE</a>
+        — <span class="clock">—</span>
+        <a href="https://24timezones.com/time-zone/et"><span class="tz-abbr">—</span></a>
+      </p>
+      <p class="time-row" data-tz="America/Los_Angeles">
+        <a href="https://24timezones.com/world_directory/current_san_francisco_time.php">TIME IN SAN FRANCISCO</a>
+        — <span class="clock">—</span>
+        <a href="https://24timezones.com/time-zone/pt"><span class="tz-abbr">—</span></a>
+      </p>
+      <p class="time-row" data-tz="Asia/Shanghai">
+        <a href="https://24timezones.com/world_directory/current_harbin_time.php">TIME IN HARBIN</a>
+        — <span class="clock">—</span>
+        <a href="https://24timezones.com/time-zone/cst"><span class="tz-abbr">—</span></a>
+      </p>
+    </div>
+
+    <!-- ============================================================
+         LATEST POSTS — auto-rendered from the POSTS array in posts.js,
+         pulling title + date from each post's <meta> tags.
+         data-limit controls how many to show. Don't edit the list here.
+         ============================================================ -->
+    <div class="section-label">Latest</div>
+    <ul class="posts-list" data-render="latest" data-limit="5"></ul>
+
+  </main>
+
+  <script src="clock.js"></script>
+  <script src="posts.js"></script>
 </body>
 </html>
