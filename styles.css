@@ -45,7 +45,7 @@ body {
 .site-header { margin-bottom: 3.5rem; }
 
 .site-name {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 2.75rem;
@@ -79,7 +79,7 @@ a:hover { text-decoration: underline; }
 
 .more-link {
   display: inline-block;
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-style: italic;
   font-size: 1.35rem;
   color: var(--accent);
@@ -91,7 +91,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Home: time block ---------- */
 .times {
   margin: 3rem 0 3.5rem;
-  font-family: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Schibsted Grotesk', sans-serif;
   font-size: 1.1rem;
   line-height: 1.95;
   color: var(--text-soft);
@@ -135,8 +135,7 @@ a:hover { text-decoration: underline; }
   align-items: baseline;
 }
 .posts-list .date {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-style: italic;
+  font-family: 'Schibsted Grotesk', sans-serif;
   color: var(--text-soft);
   font-size: 1.02rem;
   white-space: nowrap;
