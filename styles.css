@@ -6,9 +6,8 @@
   --accent-soft: #9fc5e8;
   --text: #111111;
   --text-soft: #6b6b6b;
-  --bg: #ffffff;
+  --bg: #fafaf8;
   --rule: rgba(0, 0, 0, 0.12);
-  --serif: Georgia, "Times New Roman", Times, serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -18,31 +17,33 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 ::selection { background: var(--accent); color: #fff; }
 
 body {
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
   background-color: var(--bg);
   min-height: 100vh;
   font-size: 18px;
   line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 4.5rem 2.25rem 6rem;
+  padding: 2.25rem;
 }
 
 /* ---------- Header ---------- */
-.site-header { margin-bottom: 3.5rem; }
+.site-header { margin-bottom: 2.5rem; }
 
 .site-name {
-  font-family: var(--serif);
-  font-style: italic;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-style: normal;
   font-weight: 400;
-  font-size: 2.75rem;
-  letter-spacing: -0.01em;
+  font-size: 1.5rem;
+  letter-spacing: 0;
   line-height: 1;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 .site-name a {
   color: var(--text);
@@ -68,27 +69,10 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ---------- Home: blurb ---------- */
-.blurb {
-  font-size: 1.12rem;
-  line-height: 1.7;
-  max-width: 72ch;
-  margin-bottom: 0.75rem;
-}
-
-.more-link {
-  display: inline;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.35rem;
-  color: var(--accent);
-  letter-spacing: -0.01em;
-}
-.more-link:hover { text-decoration: none; opacity: 0.75; }
 
 /* ---------- Section labels ---------- */
 .section-label {
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -111,7 +95,7 @@ a:hover { text-decoration: underline; }
   align-items: baseline;
 }
 .posts-list .date {
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text-soft);
   font-size: 1.02rem;
   white-space: nowrap;
@@ -123,40 +107,47 @@ a:hover { text-decoration: underline; }
 }
 .posts-list .title:hover { text-decoration: underline; }
 .posts-list .empty {
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-style: italic;
   color: var(--text-soft);
   grid-column: 1 / -1;
 }
 
-/* ---------- About page ---------- */
+/* ---------- About section ---------- */
 .about-contacts {
-  margin-bottom: 2.25rem;
-  font-size: 1.12rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  font-size: 1rem;
   color: var(--text-soft);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 .about-contacts a {
-  color: var(--text);
+  color: var(--text-soft);
   text-decoration: none;
-  border-bottom: 1.5px solid var(--accent);
-  padding-bottom: 1px;
 }
 .about-contacts a:hover { color: var(--accent); }
 .about-contacts .sep {
-  margin: 0 0.65rem;
+  margin: 0 0.85rem;
   color: rgba(0,0,0,0.25);
   user-select: none;
 }
 
 .about-body p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.35rem;
   font-size: 1.12rem;
-  line-height: 1.75;
+  line-height: 1.6;
   max-width: 72ch;
 }
+.about-body p:last-child { margin-bottom: 0; }
+.about-body a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.about-body a:hover { color: var(--accent); }
 
 /* ---------- Thoughts archive ---------- */
 .archive-title {
@@ -192,7 +183,7 @@ a:hover { text-decoration: underline; }
 .archive-list a:hover { color: var(--accent); }
 
 .empty-state {
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-style: italic;
   color: var(--text-soft);
   font-size: 1.05rem;
@@ -209,7 +200,7 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0.6rem;
 }
 .post-meta {
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-style: italic;
   color: var(--text-soft);
   font-size: 1.02rem;
@@ -237,7 +228,7 @@ a:hover { text-decoration: underline; }
   border-left: 3px solid var(--accent);
   padding: 0.2rem 0 0.2rem 1.05rem;
   margin: 1.4rem 0;
-  font-family: var(--serif);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-style: italic;
   font-size: 1.1rem;
   color: var(--text-soft);

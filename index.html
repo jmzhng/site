@@ -6,40 +6,46 @@
   <title>jeremy zhang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="container">
 
     <header class="site-header">
-      <h1 class="site-name">jeremy zhang</h1>
+      <h1 class="site-name">Jeremy Zhang</h1>
       <nav class="nav">
-        <a href="index.html" class="active">home</a>
-        <a href="about.html">about me</a>
-        <a href="blog.html">thoughts</a>
       </nav>
     </header>
 
     <!-- ============================================================
-         HOME BLURB — edit this paragraph (short version of about me)
+         ABOUT — edit the long-form bio below. One <p>...</p> per
+         paragraph. Add or remove freely.
          ============================================================ -->
-    <p class="blurb">
-      hi i'm jeremy, a 2nd year computer engineering student at purdue.
-      <a href="about.html" class="more-link">&gt;&gt;</a>
-    </p>
+    <div class="about-body">
+      <p>
+        I'm a student studying Computer Engineering at Purdue.
+      </p>
+      <p>
+        Currently, I am an Undergraduate Researcher with
+        <a href="https://engineering.purdue.edu/cvirl" target="_blank">CVIRL</a>
+        and Co-Founder of <a href="https://trajecta.me" target="_blank">Trajecta</a>.
+      </p>
+    </div>
 
     <!-- ============================================================
-         LATEST POSTS — auto-rendered from the POSTS array in posts.js,
-         pulling title + date from each post's <meta> tags.
-         data-limit controls how many to show. Don't edit the list here.
+         CONTACTS — edit the URLs and the email below.
          ============================================================ -->
-    <div class="section-label">Latest</div>
-    <ul class="posts-list" data-render="latest" data-limit="5"></ul>
+    <p class="about-contacts">
+      <a href="https://github.com/jmzhng">GitHub</a>
+      <span class="sep"> </span>
+      <a href="https://www.linkedin.com/in/zhang-jeremy">LinkedIn</a>
+      <span class="sep"> </span>
+      <a href="mailto:me@jem.fyi">me@jem.fyi</a>
+    </p>
 
   </main>
 
   <script src="posts.js"></script>
-  <script src="particles.js"></script>
 </body>
 </html>
