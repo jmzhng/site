@@ -2,10 +2,10 @@
    Edit these variables to retheme the whole site.
    ============================================================ */
 :root {
-  --accent: #6fa8dc;          /* light blue highlight — selection, links */
+  --accent: #556995;          /* light blue highlight — selection, links */
   --text: #111111;
   --text-soft: #6b6b6b;
-  --bg: #FCFBF4;
+  --bg: #F7F3EE;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
