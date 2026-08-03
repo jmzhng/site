@@ -2,7 +2,7 @@
    Edit these variables to retheme the whole site.
    ============================================================ */
 :root {
-  --accent: #556995;          /* light blue highlight — selection, links */
+  --accent: #6fa8dc;          /* light blue highlight — selection, links */
   --text: #111111;
   --text-soft: #6b6b6b;
   --bg: #F7F3EE;
